@@ -1,0 +1,15 @@
+version: '3'
+services:
+  terraform:
+    container_name: 'terraform'
+    image: local/terraform
+    build:
+      context: ./
+      dockerfile: /Users/koki-kimura/Documents/0_devel/docker/terraform/Dockerfile
+      args:
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-***!!!Change param here!!!***}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-***!!!Change param here!!!***}
+    volumes:
+    - "/etc/timezone:/etc/timezone:ro"
+    - "/etc/localtime:/etc/localtime:ro"
+    #  - ./src:/root/src

@@ -1,0 +1,14 @@
+When you build this env on aws with Terraform, it is neccecery to change these files below.
+
+
+File-name:" credentials " @.aws
+***************************************
+Ln:2, Col:21~33
+Ln:3, Col:25~37
+***************************************
+
+File-name:" docker-compose.yml " @.
+***************************************
+Ln:10, Col:49~78
+Ln:11, Col:57~86
+***************************************
